@@ -471,7 +471,9 @@ PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/common \
     hardware/qcom-caf/sm8150 \
     hardware/google/pixel \
-    vendor/qcom/opensource/commonsys/system/bt/conf
+    vendor/qcom/opensource/commonsys/system/bt/conf \
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth
+
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
