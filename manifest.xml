@@ -250,6 +250,16 @@
         </interface>
         <fqname>@1.0::IDevice/default</fqname>
     </hal>
+    <!--UICC secure element -->
+   <hal format="hidl">
+       <name>android.hardware.secure_element</name>
+       <transport>hwbinder</transport>
+       <version>1.1</version>
+       <interface>
+           <name>ISecureElement</name>
+           <instance>eSE1</instance>
+       </interface>
+    </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
