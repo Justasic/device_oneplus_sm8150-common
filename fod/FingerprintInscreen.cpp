@@ -78,20 +78,23 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
+    this->mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
     this->mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 1);
 
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
+    this->mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     this->mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
 
     return Void();
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
-    this->mFodCircleVisible = true;
-    this->mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
+    this->mVendorDisplayService->setMode(OP_DISPLAY_AOD_MODE, 0);
+    this->mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
+    this->mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
 
     return Void();
 }
@@ -150,7 +153,13 @@ Return<bool> FingerprintInscreen::handleAcquired(int32_t acquiredInfo, int32_t v
 }
 
 Return<bool> FingerprintInscreen::handleError(int32_t error, int32_t vendorCode) {
-    return error == FINGERPRINT_ERROR_VENDOR && vendorCode == 6;
+    switch (error) {
+        case FINGERPRINT_ERROR_VENDOR:
+            // Ignore vendorCode 6
+            return vendorCode == 6;
+        default:
+            return false;
+    }
 }
 
 Return<void> FingerprintInscreen::setLongPressEnabled(bool enabled) {
