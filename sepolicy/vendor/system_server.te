@@ -5,3 +5,6 @@ get_prop(system_server, vendor_camera_prop)
 # Allow showing fast charge status on LS
 allow system_server sysfs_battery_supply:file { getattr open read write };
 allow system_server vendor_default_prop:file read;
+allow system_server vendor_sysfs_battery_supply:file { getattr open read };
+
+allow system_server app_zygote:process { getpgid };
