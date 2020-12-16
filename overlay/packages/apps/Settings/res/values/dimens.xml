@@ -19,5 +19,5 @@
     <dimen name="fingerprint_dot_radius">8dp</dimen>
     <item name="fingerprint_sensor_location_fraction_y" type="fraction">80%</item>
     <!-- Settings Search -->
-    <dimen name="search_bar_text_size">7.0sp</dimen>
+    <dimen name="search_bar_text_size">16sp</dimen>
 </resources>
