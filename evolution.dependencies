@@ -13,11 +13,6 @@
     "target_path" : "vendor/oneplus"
   },
   {
-    "repository"  : "Justasic/vendor_google_camera",
-    "remote"      : "github",
-    "target_path" : "vendor/addons/google/camera"
-  },
-  {
     "repository"  : "vendor_oneplus_camera",
     "target_path" : "vendor/addons/oneplus/camera",
     "branch"      : "sm8150",
