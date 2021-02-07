@@ -85,16 +85,22 @@ Return<void> FingerprintInscreen::onPress() {
 }
 
 Return<void> FingerprintInscreen::onRelease() {
+# if !FOD_DIMLAYER
     this->mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
+# endif
     this->mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
 
     return Void();
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
+# if !FOD_DIMLAYERg
     this->mVendorDisplayService->setMode(OP_DISPLAY_AOD_MODE, 0);
     this->mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     this->mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
+# else
+    this->mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
+# endif
 
     return Void();
 }
