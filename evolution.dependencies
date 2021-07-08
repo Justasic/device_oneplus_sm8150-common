@@ -1,11 +1,13 @@
 [
   {
-    "repository"  : "device_oneplus_common",
+    "repository"  : "npv12/device_oneplus_common",
     "target_path" : "device/oneplus/common"
+    "branch"      : "11"
   },
   {
-    "repository"  : "vendor_oneplus",
+    "repository"  : "npv12/vendor_oneplus",
     "target_path" : "vendor/oneplus"
+    "branch"      : "11"
   },
   {
     "repository"  : "crdroidandroid/android_vendor_oneplus_apps",
