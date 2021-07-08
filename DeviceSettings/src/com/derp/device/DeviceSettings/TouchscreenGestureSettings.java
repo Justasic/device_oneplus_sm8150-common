@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.derp.device.DeviceSettings;
+package com.evolution.device.DeviceSettings;
 
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -34,10 +34,10 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 
-import com.android.internal.derp.hardware.LineageHardwareManager; // Need FWB support
-import com.android.internal.derp.hardware.TouchscreenGesture; // Need FWB support
+import com.android.internal.custom.hardware.LineageHardwareManager; // Need FWB support
+import com.android.internal.custom.hardware.TouchscreenGesture; // Need FWB support
 
-import com.derp.device.DeviceSettings.R;
+import com.evolution.device.DeviceSettings.R;
 
 import java.lang.System;
 

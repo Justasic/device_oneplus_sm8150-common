@@ -30,8 +30,8 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>com.derp.device.DeviceSettings.KeyHandler</item>
-        <item>com.derp.device.DeviceSettings.TouchKeyHandler</item>
+        <item>com.evolution.device.DeviceSettings.KeyHandler</item>
+        <item>com.evolution.device.DeviceSettings.TouchKeyHandler</item>
     </string-array>
 
     <!-- Hardware keys present on the device, stored as a bit field.
@@ -77,7 +77,7 @@
     <integer name="config_alertSliderLocation">1</integer>
 
     <!-- Whether key handler sends intent when changing slider position -->
-    <string name="config_alertSliderIntent">com.derp.device.DeviceSettings.UPDATE_SLIDER_POSITION</string>
+    <string name="config_alertSliderIntent">com.evolution.device.DeviceSettings.UPDATE_SLIDER_POSITION</string>
 
     <!-- Defines the custom pickup sensor used by various OEMs like OnePlus-->
     <string name="config_dozePickupSensorType">com.oneplus.sensor.pickup</string>
