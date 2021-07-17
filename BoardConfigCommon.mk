@@ -88,6 +88,10 @@ TARGET_CAMERA_NEEDS_CLIENT_INFO := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# OOS Cam and OOS Gallery are not included in evo
+TARGET_SHIPS_OOSGALLERY := false
+TARGET_SHIPS_OOSCAM := false
+
 # FOD
 TARGET_SURFACEFLINGER_FOD_LIB := //$(VENDOR_PATH):libfod_extension.oneplus_msmnile
 

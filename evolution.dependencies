@@ -10,9 +10,9 @@
     "branch"      : "11"
   },
   {
-    "repository"  : "crdroidandroid/android_vendor_oneplus_apps",
+    "repository"  : "npv12/vendor_oneplus_apps",
     "target_path" : "vendor/oneplus/apps",
-    "branch"      : "11.0",
+    "branch"      : "11",
     "remote"      : "gitlab"
   }
 ]
